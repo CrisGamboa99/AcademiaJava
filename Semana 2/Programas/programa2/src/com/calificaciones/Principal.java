@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Principal {
 
+	// Variables estáticas que le pertenecen a la clase
 	static Scanner sc = new Scanner(System.in);
 	static Integer cal1,cal2,cal3;
 	static String nombre;
@@ -23,9 +24,13 @@ public class Principal {
 		cal3 = sc.nextInt();
 		sc.close();
 		
-		Calificaciones.calificaciones(cal1, cal2, cal3);
+		// Se llama al método estático por medio de su clase
+		// Se le pasan los parámetros de tipo Integer
+		Calificaciones.calificaciones(nombre, cal1, cal2, cal3); // Imprime un String con el nombre y calificaciones
 		
-		Calificaciones.calificaciones(nombre, cal1, cal2, cal3);
+		Calificaciones.calificaciones(cal1, cal2, cal3); // Imprime el promedio
+		
+		
 	}
 
 }
