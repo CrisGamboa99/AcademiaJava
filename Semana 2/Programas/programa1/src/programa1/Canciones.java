@@ -3,14 +3,17 @@ package programa1;
 import java.util.ArrayList;
 
 class Biblioteca {
+	// Variables de instancia
 	private String cancion;
 	private String artista;
 	
+	// Constructor para poder asignar un valor a las variables de instancia
 	public Biblioteca(String cancion, String artista) {
 		this.cancion = cancion;
 		this.artista = artista;
 	}
 	
+	// Getters para poder acceder a las variables de instancia privadas
 	public String getCancion() {
 		return cancion;
 	}
@@ -22,6 +25,8 @@ class Biblioteca {
 
 public class Canciones {
 
+	// Métodos estáticos para no instanciar un objeto
+	// Método para buscar una canción por su titulo
 	static void buscarCancion(String titulo, 
 			ArrayList<Biblioteca> canciones) {
 		int i = 1;
@@ -32,8 +37,10 @@ public class Canciones {
 			}
 			i++;
 		}
+		System.out.println("----------");
 	}
 	
+	// Método para buscar un artista y mostrar todas sus canciones
 	static void buscarArtista(String artista, 
 			ArrayList<Biblioteca> canciones) {
 		System.out.println("Canciones de " + artista + ":");
@@ -42,15 +49,20 @@ public class Canciones {
 				System.out.println(c.getCancion());
 			}
 		}
+		System.out.println("----------");
 	}
 	
+	// Método para mostrar todas las canciones del ArrayList
 	static void mostrarCanciones(ArrayList<Biblioteca> canciones) {
+		System.out.println("Listado de canciones");
+		
 		for (int i = 0; i < canciones.size(); i++) {
 			int num = 1 + i;
 			System.out.println("#" + num + ": " 
 					+ canciones.get(i).getCancion() + " - "
 					+ canciones.get(i).getArtista());
 		}
+		System.out.println("----------");
 	}
 
 	public static void main(String[] args) {
@@ -67,11 +79,7 @@ public class Canciones {
 	
 		buscarCancion(titulo, canciones);
 		
-		System.out.println("----------");
-		
 		mostrarCanciones(canciones);
-		
-		System.out.println("----------");
 		
 		buscarArtista(artista, canciones);
 	}
