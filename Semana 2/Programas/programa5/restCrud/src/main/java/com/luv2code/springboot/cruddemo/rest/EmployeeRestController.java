@@ -1,7 +1,7 @@
 package com.luv2code.springboot.cruddemo.rest;
 
 import com.luv2code.springboot.cruddemo.entity.Clientes;
-import com.luv2code.springboot.cruddemo.service.EmployeeService;
+import com.luv2code.springboot.cruddemo.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,18 +11,18 @@ import java.util.List;
 @RequestMapping("/api")
 public class EmployeeRestController {
 
-    private EmployeeService employeeService;
+    private ClienteService clienteService;
 
     @Autowired
-    public EmployeeRestController(EmployeeService theEmployeeService) {
-        employeeService = theEmployeeService;
+    public EmployeeRestController(ClienteService theEmployeeService) {
+        clienteService = theEmployeeService;
     }
 
     // expose "/employees" and return a list of employees
     // Clientes corresponde al entity
     @GetMapping("/employees")
     public List<Clientes> findAll() {
-        return employeeService.findAll();
+        return clienteService.findAll();
     }
 
     // add mapping for GET /employees/{employeeId}
@@ -30,7 +30,7 @@ public class EmployeeRestController {
     @GetMapping("/employees/{employeeId}")
     public Clientes getEmployee(@PathVariable int employeeId) {
 
-        Clientes theEmployee = employeeService.findById(employeeId);
+        Clientes theEmployee = clienteService.findById(employeeId);
 
         if (theEmployee == null) {
             throw new RuntimeException("Employee id not found - " + employeeId);
@@ -49,7 +49,7 @@ public class EmployeeRestController {
 
         theEmployee.setId(0);
 
-        Clientes dbEmployee = employeeService.save(theEmployee);
+        Clientes dbEmployee = clienteService.save(theEmployee);
 
         return dbEmployee;
     }
@@ -59,7 +59,7 @@ public class EmployeeRestController {
     @PutMapping("/employees")
     public Clientes updateEmployee(@RequestBody Clientes theEmployee) {
 
-        Clientes dbEmployee = employeeService.save(theEmployee);
+        Clientes dbEmployee = clienteService.save(theEmployee);
 
         return dbEmployee;
     }
@@ -69,7 +69,7 @@ public class EmployeeRestController {
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId) {
 
-        Clientes tempEmployee = employeeService.findById(employeeId);
+        Clientes tempEmployee = clienteService.findById(employeeId);
 
         // throw exception if null
 
@@ -77,7 +77,7 @@ public class EmployeeRestController {
             throw new RuntimeException("Employee id not found - " + employeeId);
         }
 
-        employeeService.deleteById(employeeId);
+        clienteService.deleteById(employeeId);
 
         return "Deleted employee id - " + employeeId;
     }

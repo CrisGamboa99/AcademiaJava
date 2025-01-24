@@ -9,15 +9,16 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOJpaImpl implements ClienteDAO { // Implementa la interfaz ClienteDAO
+public class ClienteDAOJpaImpl implements ClienteDAO { // Implementa la interfaz ClienteDAO
 
     // define field for entitymanager
     private EntityManager entityManager;
 
 
     // set up constructor injection
+    // Se cambia el nombre del constructor para que concuerde con el nuevo nombre de la clase
     @Autowired
-    public EmployeeDAOJpaImpl(EntityManager theEntityManager) {
+    public ClienteDAOJpaImpl(EntityManager theEntityManager) {
         entityManager = theEntityManager;
     }
 

@@ -4,14 +4,14 @@ import com.luv2code.springboot.cruddemo.entity.Clientes;
 
 import java.util.List;
 
-public interface EmployeeService {
+public interface ClienteService {
 
 	// Clientes corresponde al entity
     List<Clientes> findAll();
 
     Clientes findById(int theId);
 
-    Clientes save(Clientes theEmployee);
+    Clientes save(Clientes elCliente);
 
     void deleteById(int theId);
 

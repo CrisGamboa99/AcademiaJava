@@ -9,14 +9,15 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class ClienteServiceImpl implements ClienteService { // Implementa la interfaz del service
 
 	// Variable de tipo ClienteDAO (interfaz)
     private ClienteDAO clienteDAO;
 
+    // El nombre del constructor cambia para concordar con el nuevo nombre de la clase
     @Autowired
-    public EmployeeServiceImpl(ClienteDAO theEmployeeDAO) {
-        clienteDAO = theEmployeeDAO;
+    public ClienteServiceImpl(ClienteDAO elClienteDAO) {
+        clienteDAO = elClienteDAO;
     }
 
     // Clientes corresponde al entity
@@ -32,8 +33,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Transactional
     @Override
-    public Clientes save(Clientes theEmployee) {
-        return clienteDAO.save(theEmployee);
+    public Clientes save(Clientes elCliente) {
+        return clienteDAO.save(elCliente);
     }
 
     @Transactional
