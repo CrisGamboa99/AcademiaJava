@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface EmployeeService {
 
+	// Clientes corresponde al entity
     List<Clientes> findAll();
 
     Clientes findById(int theId);

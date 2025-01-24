@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOJpaImpl implements EmployeeDAO {
+public class EmployeeDAOJpaImpl implements ClienteDAO { // Implementa la interfaz ClienteDAO
 
     // define field for entitymanager
     private EntityManager entityManager;
@@ -21,6 +21,7 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
         entityManager = theEntityManager;
     }
 
+    // Clientes corresponde al entity
 
     @Override
     public List<Clientes> findAll() {

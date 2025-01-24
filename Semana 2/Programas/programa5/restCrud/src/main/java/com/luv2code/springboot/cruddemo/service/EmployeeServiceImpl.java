@@ -1,6 +1,6 @@
 package com.luv2code.springboot.cruddemo.service;
 
-import com.luv2code.springboot.cruddemo.dao.EmployeeDAO;
+import com.luv2code.springboot.cruddemo.dao.ClienteDAO;
 import com.luv2code.springboot.cruddemo.entity.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,33 +11,35 @@ import java.util.List;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    private EmployeeDAO employeeDAO;
+	// Variable de tipo ClienteDAO (interfaz)
+    private ClienteDAO clienteDAO;
 
     @Autowired
-    public EmployeeServiceImpl(EmployeeDAO theEmployeeDAO) {
-        employeeDAO = theEmployeeDAO;
+    public EmployeeServiceImpl(ClienteDAO theEmployeeDAO) {
+        clienteDAO = theEmployeeDAO;
     }
 
+    // Clientes corresponde al entity
     @Override
     public List<Clientes> findAll() {
-        return employeeDAO.findAll();
+        return clienteDAO.findAll();
     }
 
     @Override
     public Clientes findById(int theId) {
-        return employeeDAO.findById(theId);
+        return clienteDAO.findById(theId);
     }
 
     @Transactional
     @Override
     public Clientes save(Clientes theEmployee) {
-        return employeeDAO.save(theEmployee);
+        return clienteDAO.save(theEmployee);
     }
 
     @Transactional
     @Override
     public void deleteById(int theId) {
-        employeeDAO.deleteById(theId);
+        clienteDAO.deleteById(theId);
     }
 }
 

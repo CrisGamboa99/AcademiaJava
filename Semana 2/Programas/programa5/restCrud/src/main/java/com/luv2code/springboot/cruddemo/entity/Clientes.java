@@ -26,7 +26,7 @@ public class Clientes { // Se cambia el nombre de la clase
 
 
     // define constructors
- // Se cambia el nombre de los constructores para concordar con el de la clase
+    // Se cambia el nombre de los constructores para concordar con el de la clase
     public Clientes() { 
 
     }

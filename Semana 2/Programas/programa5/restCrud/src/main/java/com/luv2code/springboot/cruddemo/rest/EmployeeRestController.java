@@ -19,6 +19,7 @@ public class EmployeeRestController {
     }
 
     // expose "/employees" and return a list of employees
+    // Clientes corresponde al entity
     @GetMapping("/employees")
     public List<Clientes> findAll() {
         return employeeService.findAll();
