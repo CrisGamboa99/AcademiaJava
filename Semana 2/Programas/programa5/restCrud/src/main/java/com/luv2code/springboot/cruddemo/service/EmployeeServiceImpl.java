@@ -1,7 +1,7 @@
 package com.luv2code.springboot.cruddemo.service;
 
 import com.luv2code.springboot.cruddemo.dao.EmployeeDAO;
-import com.luv2code.springboot.cruddemo.entity.Employee;
+import com.luv2code.springboot.cruddemo.entity.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,18 +19,18 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> findAll() {
+    public List<Clientes> findAll() {
         return employeeDAO.findAll();
     }
 
     @Override
-    public Employee findById(int theId) {
+    public Clientes findById(int theId) {
         return employeeDAO.findById(theId);
     }
 
     @Transactional
     @Override
-    public Employee save(Employee theEmployee) {
+    public Clientes save(Clientes theEmployee) {
         return employeeDAO.save(theEmployee);
     }
 

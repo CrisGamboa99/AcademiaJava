@@ -1,16 +1,16 @@
 package com.luv2code.springboot.cruddemo.service;
 
-import com.luv2code.springboot.cruddemo.entity.Employee;
+import com.luv2code.springboot.cruddemo.entity.Clientes;
 
 import java.util.List;
 
 public interface EmployeeService {
 
-    List<Employee> findAll();
+    List<Clientes> findAll();
 
-    Employee findById(int theId);
+    Clientes findById(int theId);
 
-    Employee save(Employee theEmployee);
+    Clientes save(Clientes theEmployee);
 
     void deleteById(int theId);
 

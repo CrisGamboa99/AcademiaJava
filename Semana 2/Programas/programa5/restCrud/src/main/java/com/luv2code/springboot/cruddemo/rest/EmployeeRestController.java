@@ -1,6 +1,6 @@
 package com.luv2code.springboot.cruddemo.rest;
 
-import com.luv2code.springboot.cruddemo.entity.Employee;
+import com.luv2code.springboot.cruddemo.entity.Clientes;
 import com.luv2code.springboot.cruddemo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,16 +20,16 @@ public class EmployeeRestController {
 
     // expose "/employees" and return a list of employees
     @GetMapping("/employees")
-    public List<Employee> findAll() {
+    public List<Clientes> findAll() {
         return employeeService.findAll();
     }
 
     // add mapping for GET /employees/{employeeId}
 
     @GetMapping("/employees/{employeeId}")
-    public Employee getEmployee(@PathVariable int employeeId) {
+    public Clientes getEmployee(@PathVariable int employeeId) {
 
-        Employee theEmployee = employeeService.findById(employeeId);
+        Clientes theEmployee = employeeService.findById(employeeId);
 
         if (theEmployee == null) {
             throw new RuntimeException("Employee id not found - " + employeeId);
@@ -41,14 +41,14 @@ public class EmployeeRestController {
     // add mapping for POST /employees - add new employee
 
     @PostMapping("/employees")
-    public Employee addEmployee(@RequestBody Employee theEmployee) {
+    public Clientes addEmployee(@RequestBody Clientes theEmployee) {
 
         // also just in case they pass an id in JSON ... set id to 0
         // this is to force a save of new item ... instead of update
 
         theEmployee.setId(0);
 
-        Employee dbEmployee = employeeService.save(theEmployee);
+        Clientes dbEmployee = employeeService.save(theEmployee);
 
         return dbEmployee;
     }
@@ -56,9 +56,9 @@ public class EmployeeRestController {
     // add mapping for PUT /employees - update existing employee
 
     @PutMapping("/employees")
-    public Employee updateEmployee(@RequestBody Employee theEmployee) {
+    public Clientes updateEmployee(@RequestBody Clientes theEmployee) {
 
-        Employee dbEmployee = employeeService.save(theEmployee);
+        Clientes dbEmployee = employeeService.save(theEmployee);
 
         return dbEmployee;
     }
@@ -68,7 +68,7 @@ public class EmployeeRestController {
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId) {
 
-        Employee tempEmployee = employeeService.findById(employeeId);
+        Clientes tempEmployee = employeeService.findById(employeeId);
 
         // throw exception if null
 

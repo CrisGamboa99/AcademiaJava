@@ -1,6 +1,6 @@
 package com.luv2code.springboot.cruddemo.dao;
 
-import com.luv2code.springboot.cruddemo.entity.Employee;
+import com.luv2code.springboot.cruddemo.entity.Clientes;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,46 +23,47 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO {
 
 
     @Override
-    public List<Employee> findAll() {
+    public List<Clientes> findAll() {
 
         // create a query
-        TypedQuery<Employee> theQuery = entityManager.createQuery("from Employee", Employee.class);
+    	// Se cambia el from Employee a from Clientes para que concuerde con el nombre de la clase y sea reconocido
+        TypedQuery<Clientes> theQuery = entityManager.createQuery("from Clientes", Clientes.class);
 
         // execute query and get result list
-        List<Employee> employees = theQuery.getResultList();
+        List<Clientes> clientes = theQuery.getResultList();
 
         // return the results
-        return employees;
+        return clientes;
     }
 
     @Override
-    public Employee findById(int theId) {
+    public Clientes findById(int theId) {
 
-        // get employee
-        Employee theEmployee = entityManager.find(Employee.class, theId);
+        // get cliente
+        Clientes elCliente = entityManager.find(Clientes.class, theId);
 
-        // return employee
-        return theEmployee;
+        // return cliente
+        return elCliente;
     }
 
     @Override
-    public Employee save(Employee theEmployee) {
+    public Clientes save(Clientes theCliente) {
 
-        // save employee
-        Employee dbEmployee = entityManager.merge(theEmployee);
+        // save cliente
+        Clientes dbCliente = entityManager.merge(theCliente);
 
-        // return the dbEmployee
-        return dbEmployee;
+        // return the dbCliente
+        return dbCliente;
     }
 
     @Override
     public void deleteById(int theId) {
 
-        // find employee by id
-        Employee theEmployee = entityManager.find(Employee.class, theId);
+        // find cliente by id
+        Clientes elCliente = entityManager.find(Clientes.class, theId);
 
-        // remove employee
-        entityManager.remove(theEmployee);
+        // remove cliente
+        entityManager.remove(elCliente);
     }
 }
 

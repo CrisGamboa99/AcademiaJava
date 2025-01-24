@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="clientes") // Se cambia el nombre de la tabla por clientes
-public class Employee {
+public class Clientes { // Se cambia el nombre de la clase
 
     // define fields
     @Id
@@ -17,20 +17,25 @@ public class Employee {
 
     @Column(name="apellido")
     private String apellido;
+    
+    @Column(name="edad") // Se añade un nuevo campo de edad
+    private int edad;
 
     @Column(name="correo")
     private String correo;
 
 
     // define constructors
-    public Employee() {
+ // Se cambia el nombre de los constructores para concordar con el de la clase
+    public Clientes() { 
 
     }
 
     // Se cambian las variables del constructor
-    public Employee(String nombre, String apellido, String correo) {
+    public Clientes(String nombre, String apellido, int edad, String correo) {
         this.nombre = nombre;
         this.apellido = apellido;
+        this.edad = edad; // Se añade la variable edad al constructor
         this.correo = correo;
     }
 
@@ -58,7 +63,15 @@ public class Employee {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
+    public int getEdad() { // Se añade get de edad
+		return edad;
+	}
+
+	public void setEdad(int edad) { // Se añade set de edad
+		this.edad = edad;
+	}
+
+	public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
@@ -78,6 +91,7 @@ public class Employee {
                 "id=" + id +
                 ", nombres='" + nombre + '\'' +
                 ", apellidos='" + apellido + '\'' +
+                ", edad='" + edad + '\'' + // Se añade edad
                 ", correo='" + correo + '\'' +
                 '}';
     }
