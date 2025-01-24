@@ -12,14 +12,14 @@ public class Employee {
     @Column(name="id")
     private int id;
 
-    @Column(name="first_name")
-    private String firstName;
+    @Column(name="nombre") // Se cambian los nombres de los campos y las variables correspondientes
+    private String nombre;
 
-    @Column(name="last_name")
-    private String lastName;
+    @Column(name="apellido")
+    private String apellido;
 
-    @Column(name="email")
-    private String email;
+    @Column(name="correo")
+    private String correo;
 
 
     // define constructors
@@ -27,10 +27,11 @@ public class Employee {
 
     }
 
-    public Employee(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+    // Se cambian las variables del constructor
+    public Employee(String nombre, String apellido, String correo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
     }
 
     // define getter/setter
@@ -43,38 +44,41 @@ public class Employee {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    
+    // Se cambian los getters y setters para concordar con las variables
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setNombres(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
     // define toString
+    // También se cambia para concordar con las variables
     @Override
     public String toString() {
-        return "Employee{" +
+        return "Clientes{" +
                 "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+                ", nombres='" + nombre + '\'' +
+                ", apellidos='" + apellido + '\'' +
+                ", correo='" + correo + '\'' +
                 '}';
     }
 }
