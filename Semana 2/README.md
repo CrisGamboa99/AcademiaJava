@@ -1,6 +1,7 @@
 ACADEMIA JAVA SEMANA 2
 
 MARTES
+
 1. Biblioteca Musical con ArrayList
 Objetivo: Crear un sistema de gestión de canciones usando Arrays y ArrayList
 - Uso de ArrayList
@@ -14,10 +15,13 @@ Objetivo: Crear un sistema de gestión de canciones usando Arrays y ArrayList
 - Method overloading
 
 MIERCOLES
+
 3. Ejercicio donde se aplique POLIMORFISMO con Abstracción
 
 JUEVES
+
 4. Programa implementándole un Objeto Inmutable
 
 VIERNES
+
 5. Servicio CRUD Rest
