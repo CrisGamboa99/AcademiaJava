@@ -6,7 +6,9 @@ LUNES
 2. Programa para usar el TryWithResource.
 
 MARTES
+
 3. Programa usando el principio de Inyección de Dependencias.
 
 MIERCOLES
+
 4. Aplicar los métodos equals(Object o) y hashCode() en un collection HashSet
