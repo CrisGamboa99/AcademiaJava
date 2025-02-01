@@ -1,5 +1,6 @@
 package com.escuela;
 
+import java.time.LocalTime;
 import java.util.Objects;
 
 public class Profesor {
@@ -65,5 +66,8 @@ public class Profesor {
 		return "Profesor [nombre=" + nombre + ", apellido=" + apellido + "]";
 	}
 	
-	/////
+	public void materiaAsignada() {
+		System.out.println("Profesor: " + nombre + " " + apellido);
+		materia.asignarMateria();
+	}
 }

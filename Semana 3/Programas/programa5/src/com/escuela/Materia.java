@@ -6,11 +6,9 @@ import java.util.Objects;
 public class Materia {
 
 	private String nombre;
-	private LocalTime horario;
 	
-	public Materia(String nombre, LocalTime horario) {
+	public Materia(String nombre) {
 		this.nombre = nombre;
-		this.horario = horario;
 	}
 
 	public String getNombre() {
@@ -19,14 +17,6 @@ public class Materia {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public LocalTime getHorario() {
-		return horario;
-	}
-
-	public void setHorario(LocalTime horario) {
-		this.horario = horario;
 	}
 
 	@Override
@@ -48,7 +38,10 @@ public class Materia {
 
 	@Override
 	public String toString() {
-		return "Materia [nombre=" + nombre + ", horario=" + horario + "]";
+		return "Materia [nombre=" + nombre + "]";
 	}
 	
+	public void asignarMateria() {
+		System.out.println("Materia asignada: " + nombre);
+	}
 }

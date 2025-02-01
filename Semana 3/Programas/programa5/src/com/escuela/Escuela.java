@@ -35,7 +35,7 @@ public class Escuela {
 		return new Aula(aula.getGrupo(), aula.getNumBancas());
 	}
 
-	public void setListaAulas(Aula aula) {
+	public void setAula(Aula aula) {
 		listaAulas.add(aula);
 	}
 
@@ -68,6 +68,5 @@ public class Escuela {
 	public String toString() {
 		return "Escuela [nombre=" + nombre + ", listaAulas=" + listaAulas + ", listaProfesores=" + listaProfesores + "]";
 	}
-	
 	
 }
