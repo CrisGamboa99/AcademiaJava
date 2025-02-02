@@ -16,3 +16,8 @@ MIERCOLES
 JUEVES
 
 5. Crear programa usando el principio HAS-A (Composición, Agregación y Delegación)
+
+VIERNES
+
+6. Crud data JPA
+7. Crud data Rest 

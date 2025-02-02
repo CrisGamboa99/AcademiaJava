@@ -8,13 +8,18 @@ public class Principal {
 
 	public static void main(String[] args) {
 		
+		// Se crea lista de profesores para añadirla como atributo al bjeto de Escuela
 		Set<Profesor> profesores = new HashSet<>();
+		
+		// Se añaden elementos a la lista
 		profesores.add(new Profesor("Cristian", "Gamboa"));
 		profesores.add(new Profesor("Eduardo", "Escobedo"));
 		profesores.add(new Profesor("Juan", "Pérez"));
 		
+		// Se crea el objeto Escuela
 		Escuela escuela = new Escuela("Benito Juárez", profesores);
 		
+		// Se añaden elementos de Aula (clase que tiene la relación de composición con Escuela)
 		escuela.setAula(new Aula("1° A", 20));
 		escuela.setAula(new Aula("3° C", 30));
 		escuela.setAula(new Aula("1° B", 26));
@@ -23,6 +28,7 @@ public class Principal {
 		
 		Profesor profesor = getProfesor(profesores, "Cristian","Gamboa");
 		
+		// Se añade una Materia por medio de la delegación
 		profesor.setMateria(new Materia("Programación"));
 		
 		if(profesor!=null) {
@@ -30,7 +36,7 @@ public class Principal {
 		}
 	}
 
-	
+	// Método para obtener un profesor
 	private static Profesor getProfesor(Set<Profesor> profesores, String nombre, String apellido) {
 		Iterator<Profesor> i = profesores.iterator();
 		

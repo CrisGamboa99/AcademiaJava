@@ -7,12 +7,19 @@ import java.util.Set;
 
 public class Escuela {
 	
+	// HAS-A
 	private String nombre;
+	
+	// Se tiene una relación de composición con Aula
 	private List<Aula> listaAulas;
+	
+	// Se tiene una relación de agregación con Profesor
 	private Set<Profesor> listaProfesores;
 	
 	public Escuela(String nombre, Set<Profesor> listaProfesores) {
 		this.nombre = nombre;
+		
+		// Al tener la relación de composición, se crea directamente la listaAulas desde el constructor
 		listaAulas = new ArrayList<>();
 		this.listaProfesores = listaProfesores;
 	}
@@ -25,6 +32,7 @@ public class Escuela {
 		this.nombre = nombre;
 	}
 
+	// El método getAula devolverá una copia del objeto
 	public Aula getAula(String grupo, int numBancas) {
 		int i = listaAulas.indexOf(new Aula(grupo, numBancas));
 		Aula aula = null;
@@ -35,6 +43,7 @@ public class Escuela {
 		return new Aula(aula.getGrupo(), aula.getNumBancas());
 	}
 
+	// Se añade un elemento directamente a la lista ya creada para evitar que sea independiente
 	public void setAula(Aula aula) {
 		listaAulas.add(aula);
 	}

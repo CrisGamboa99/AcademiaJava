@@ -1,6 +1,5 @@
 package com.escuela;
 
-import java.time.LocalTime;
 import java.util.Objects;
 
 public class Profesor {
@@ -9,6 +8,7 @@ public class Profesor {
 	private String apellido;
 	private Materia materia;
 
+	// Sobrecarga de constructores
 	public Profesor(String nombre, String apellido) {
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -66,6 +66,7 @@ public class Profesor {
 		return "Profesor [nombre=" + nombre + ", apellido=" + apellido + "]";
 	}
 	
+	// Método para delegar a la otra clase (Materia)
 	public void materiaAsignada() {
 		System.out.println("Profesor: " + nombre + " " + apellido);
 		materia.asignarMateria();

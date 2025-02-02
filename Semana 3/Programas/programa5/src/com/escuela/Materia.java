@@ -1,6 +1,5 @@
 package com.escuela;
 
-import java.time.LocalTime;
 import java.util.Objects;
 
 public class Materia {
@@ -41,6 +40,7 @@ public class Materia {
 		return "Materia [nombre=" + nombre + "]";
 	}
 	
+	// Método que permite la delegación
 	public void asignarMateria() {
 		System.out.println("Materia asignada: " + nombre);
 	}
