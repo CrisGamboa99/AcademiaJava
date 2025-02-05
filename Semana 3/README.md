@@ -3,7 +3,7 @@ ACADEMIA JAVA SEMANA 3
 LUNES
 
 1. Programa crear 2 Exceptions Checked y usar 2 Exceptions Unchecked (Tomar las que proporciona Java)
-2. Programa para usar el TryWithResource.
+2. Programa implementando el TryWithResource.
 
 MARTES
 
@@ -19,5 +19,5 @@ JUEVES
 
 VIERNES
 
-6. Crud data JPA
-7. Crud data Rest 
+6. Rest CRUD Spring Data JPA
+7. Rest CRUD Spring Data Rest

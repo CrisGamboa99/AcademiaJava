@@ -1,2 +1,2 @@
-6. Crud data JPA
-7. Crud data Rest 
+6. Rest CRUD Spring Data JPA
+7. Rest CRUD Spring Data Rest
