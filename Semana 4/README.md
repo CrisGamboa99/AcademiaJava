@@ -6,5 +6,10 @@ LUNES
 
 MARTES
 
-1. Programa implementando Optional
-2. Programa implementando Predicate os Generics
+2. Programa implementando Optional
+3. Programa implementando Predicate
+
+MIERCOLES
+
+4. Programa implementar 5 Lambdas.
+5. Programa con Collections aplicando lambdas
