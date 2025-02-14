@@ -1,0 +1,1 @@
+Elaborar programa con Mockito, simulando una suma de una Calculadora.
