@@ -8,8 +8,12 @@ public interface EmpleadoService {
 
 	String save(Empleado empleado);
 	
+	List<Empleado> getEmpleados();
+	
 	List<Empleado> getEmpleadoStartsWith(String nombre);
 	
 	void delete(String id);
+	
+	String update(Empleado empleado);
 	
 }

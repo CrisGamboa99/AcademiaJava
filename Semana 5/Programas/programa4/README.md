@@ -1,1 +1,2 @@
-Elaborar programa con Mockito, simulando una suma de una Calculadora.
+CRUD SpringBoot 3, Spring Data MongoDB, Lombok, Swagger y MongoDB (Docker).
+(Creación desde cero)
