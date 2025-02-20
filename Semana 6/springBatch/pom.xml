@@ -31,26 +31,30 @@
 	</properties>
 	<dependencies>
 		<dependency>
+			<!-- Dependencia para Spring Batch -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-batch</artifactId>
 		</dependency>
-		<!--
+		<!-- Dependencia para Mongodb. No se usa en el proyecto
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		-->
 		<dependency>
+			<!-- Dependencia para construir el proyecto REST -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
+			<!-- Dependencia para hacer uso de la db H2 -->
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<!-- Dependencia para lombok -->
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
