@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document("empleado")
+@Document("empleado") // Se define la clase como un documento para la base de datos, y su nombre
 public class EmpleadoBean {
 
 	private String empId;
